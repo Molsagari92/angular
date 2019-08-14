@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<input type="text" [(ngModel)]="name" /> <br />
+<input type="checkbox" [(ngModel)]="checked" />Védett<br/>
+<!--<p *ngIf="name !== undefined" [ngStyle]="{ backgroundColor: getColor() }">
+  {{ name }}
+</p>-->
+<p *ngIf="name !== undefined" [ngClass]="{ 'name' : name.length>3 }">
+  {{ name }}
+</p>
+<p *ngIf="name === undefined || name===''"> Add meg a neved!</p>
+<button (click)="greeter()" [disabled]="name === undefined || name===''" >Greeter</button>
+<button (click)="reset()">Törlés</button>

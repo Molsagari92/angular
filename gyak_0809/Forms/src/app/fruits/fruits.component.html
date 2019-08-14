@@ -1,0 +1,54 @@
+<form #Fruits="ngForm">
+  <label>Name: <span class="star">*</span> </label>
+  <input
+    type="text"
+    name="fruitname"
+    id="name"
+    required
+    [(ngModel)]="fruitName"
+    #fruitname="ngModel"
+    minlength="4"
+    maxlength="15"
+  /><br />
+  <p class="star" *ngIf="!fruitname.valid && fruitname.touched">
+    <small>A kitöltés kötelező. Min 4, Max 15 karakter.</small>
+  </p>
+  <label>Color: </label>
+  <input
+    type="text"
+    name="fruitcolor"
+    id="color"
+    [(ngModel)]="fruitColor"
+    #fruitcolor="ngModel"
+  /><br />
+  <label>Calories: </label>
+  <input
+    type="number"
+    name="fruitcalories"
+    id="calories"
+    [(ngModel)]="fruitCalories"
+    #fruitcalories="ngModel"
+  /><br />
+  <p class="cal" *ngIf="fruitCalories > 100">Too much calories!</p>
+  <label>Size: <span class="star">*</span></label>
+  <select name="fruitsize" (change)="onChange($event)" required>
+    <option value="" selected disabled>Please choose a size</option>
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="big">Big</option> </select
+  ><br />
+  <button
+    name="gomb"
+    (click)="onClick()"
+    [disabled]="!fruitname.valid || fruitSize == null"
+  >
+    Save
+  </button>
+</form>
+
+<div *ngIf="clicked == true">
+  <p>{{ fruitName }}</p>
+  <p>{{ fruitColor }}</p>
+  <p>{{ fruitCalories }}</p>
+  <p>{{ fruitSize }}</p>
+</div>

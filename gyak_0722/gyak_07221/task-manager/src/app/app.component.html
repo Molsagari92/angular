@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<p>{{name}}</p>
+<p>{{id}}</p>
+<p>{{isImportant}}</p>
+<button (click)="Hello()" class="btn btn-primary">Greeter</button><br>
+<input type="number" [(ngModel)]="a"/> <br>
+<input type="number" [(ngModel)]="b"/> <br>
+<button type="button" (click)="Count()" class="btn btn-outline-danger">Count</button><br>
+<p>{{this.a+this.b}}</p><br>
+<p contenteditable="disabled">
+<input type="text" name="Name" [disabled]="!this.checked" [(ngModel)]="secondName" placeholder="Kinek szól az üzenet?" /> <br>
+<textarea name="Message" [disabled]="!this.checked" maxlength="50" [(ngModel)]="message" placeholder="Mit üzennél?"> </textarea><br>
+</p>
+<input type="checkbox" title="Csak akkor tölthető ki a mező ha be van pipálva" [(ngModel)]="checked"/>Editable
+<button type="button" (click)="WriteOut()" class="btn btn-outline-danger">Message</button><br>
+
+
+

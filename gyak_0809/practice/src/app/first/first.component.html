@@ -1,0 +1,6 @@
+<input type="number" [(ngModel)]=first>
+<input type="number" [(ngModel)]=second>
+<button (click)="onClick()">Add</button>
+<p *ngIf="clicked==true" [ngClass]="{'green':sum<100, 'red':sum>=100}">{{sum}}</p>
+
+

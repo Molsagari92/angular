@@ -1,0 +1,8 @@
+<div *ngIf="spaceXHistory">
+    <p appTurnBgBlue appTurnRed [index]=i *ngFor="let tortenet of spaceXHistory; let i=index">
+        Title: {{tortenet.title}}<br>
+        Event date (UTC): {{tortenet.event_date_utc |date: 'full'}} <br>
+        Flight number: {{tortenet.flight_number}} <br>
+        Details: {{tortenet.details}} <br>
+    </p>
+</div>

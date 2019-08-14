@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="card" style="width: 18rem;">
+    <h1 class="card-title">Tetszőleges cím</h1>
+<textarea name="Message" rows="7" cols="25" [(ngModel)]="szoveg" [disabled]="!this.checked"> </textarea>
+<input type="checkbox" [(ngModel)]="checked"/>Editable<br>
+<i class="fa fa-info-circle" title="Csak akkor tölthető ki a mező, ha be van pipálva"></i>
+<select [(ngModel)]="color">
+  <option value="pink" click="onClickPink()">Pink</option>
+  <option value="yellow"  click="onClickPink()">Yellow</option>
+  <option value="blue"  click="onClickPink()">Blue</option>
+</select>
+<p *ngIf="szoveg.length>15" [ngStyle]="{color: getColor()}">{{szoveg}}</p>
+</div>
+</body>

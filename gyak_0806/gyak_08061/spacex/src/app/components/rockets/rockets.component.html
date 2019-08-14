@@ -1,0 +1,13 @@
+<div *ngIf="spaceXRockets">
+    <p appTurnBgBlue appTurnRed [index]=i *ngFor="let raketa of spaceXRockets; let i=index">
+    <!-- ID: {{raketa.id}} <br> -->
+    Active: {{raketa.active ? 'Active' : 'Inactive'}} <br>
+    Boosters: {{raketa.boosters}} <br>
+    Cost per launch: {{raketa.cost_per_launch}} {{raketa.cost_per_launch>10000000 ? 'Very Expensive' : ''}} <br>
+    Company: {{raketa.company}} <br>
+    Country: {{raketa.country}} <br>
+    Height in meter: {{raketa.height.meters}} <br>
+    Height in feet: {{raketa.height.feet}}<br>
+</p>
+</div>
+

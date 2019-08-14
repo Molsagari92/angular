@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div
+  *ngFor="
+    let szam of tomb;
+    let i = index;
+    let isLast = last;
+    let isFirst = first;
+    let isEven = even;
+    let isOdd = odd
+  "
+>
+  <span [ngClass]="{ green: i === 2, bold: isFirst }">{{ szam }}</span>
+  <span *ngIf="isLast"> This is the last </span> <br>
+  
+</div>
+<input type="number" [(ngModel)]=szam>
+<button onclick="addNumber()">Add</button>
+<button (click)="sum()">Sum</button>
+<span>{{sumEven}}</span><p>{{rel}}</p>

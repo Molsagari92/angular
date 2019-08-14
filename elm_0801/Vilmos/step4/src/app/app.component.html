@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>App component</h3>
+      <input [(ngModel)]="inputText" type="text" name="" id=""> <br>
+      <span *ngFor="let i of Arr(inputText.length)">
+        <app-szines-string [text]=inputText></app-szines-string> <br>
+      </span>
+      <app-task-list></app-task-list>
+
+      <app-add-task></app-add-task>
+    </div>
+  </div>
+</div>

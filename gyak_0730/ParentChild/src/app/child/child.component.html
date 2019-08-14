@@ -1,0 +1,8 @@
+<p>child works!</p>
+<p>{{title}}</p>
+<button (click)="addToCounter()">Add</button><br>
+<input
+  (ngModelChange)="changeWrite($event)"
+  [(ngModel)]="changeVal"
+  type="text"
+/>

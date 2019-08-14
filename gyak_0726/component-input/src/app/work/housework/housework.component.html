@@ -1,0 +1,8 @@
+<h3 [ngStyle]="{backgroundColor: getColor()}">{{title}}</h3>
+<button (click)="doWeLike()">{{message}}</button>
+<div *ngFor="let housework of houseworks; let i = index">
+    <span>
+      {{housework}}
+    </span>
+  </div>
+  

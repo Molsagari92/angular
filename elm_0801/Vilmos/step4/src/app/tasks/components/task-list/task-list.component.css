@@ -1,0 +1,12 @@
+.pinkaf {
+    background-color: pink;
+}
+.blueaf {
+    color: blue;
+}
+#aDiv::nth-letter(3) {
+    color: red;
+}
+.boldaf {
+    font-weight: bold;
+}

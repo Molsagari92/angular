@@ -1,0 +1,9 @@
+<tr>
+  <td width="15px">{{ todo.id }}</td>
+  <td width="200px">{{ todo.name }}</td>
+  <td width="150px">{{ todo.description }}</td>
+  <td width="200px">{{ todo.createdAt | ownDate }}</td>
+
+  <td width="15px"><button (click)="delete()">D</button></td>
+  <td width="15px"><button (click)="edit()">E</button></td>
+</tr>

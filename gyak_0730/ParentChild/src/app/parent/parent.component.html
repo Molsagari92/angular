@@ -1,0 +1,6 @@
+<p>parent works!</p>
+<app-child [title]="title"
+(addOne)="handleAddOne($event)"
+(writeChange)="handleChange($event)"></app-child>
+<p>{{count}}</p>
+<p>{{changeValue}}</p>

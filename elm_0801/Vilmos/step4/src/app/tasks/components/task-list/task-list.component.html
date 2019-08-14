@@ -1,0 +1,15 @@
+<!-- <p *ngFor="let task of tasks; let i=index; let isOdd = odd; let isFirst = first">
+  <span *ngIf="isOdd" [ngClass]="{'pinkaf': isFirst, 'blueaf': startsWithT(task)}">{{i}}:{{task}}</span>
+  <span *ngIf="i%2===0" [ngClass]="{'pinkaf': isFirst, 'blueaf': startsWithT(task)}"><strong>
+      {{i}}:{{task}}
+    </strong></span>
+</p> -->
+
+
+<p *ngFor="let task of tasks; let i=index; let isOdd = odd; let isFirst = first">
+  <app-task appBlue [index]=i (taskClick)="onTaskClicked($event)" (hundredStatus)="onHundredStatus($event)" [task]="task"
+    [ngClass]=" {'boldaf': isOdd, 'pinkaf' : isFirst, 'blueaf' : startsWithT(task.name)}">
+  </app-task>
+</p>
+
+

@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<p>Name</p>
+<input type="text" [(ngModel)]="name" placeholder="Name" required/> <br />
+<p>Age</p>
+<input type="number" [(ngModel)]="age" placeholder="Age" required/> <br />
+<p>Gender</p>
+<input type="checkbox" name="gender" value="male" [(ngModel)]="gender" />
+Male<br />
+<button (click)="add()" [disabled]="!name || !age">Add</button>
+{{tomb.length}}

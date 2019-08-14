@@ -1,0 +1,38 @@
+<form #urlap="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="taskname">Feladat</label>
+    <input
+      name="taskname"
+      type="text"
+      id="taskname"
+      class="form-control"
+      minlength="4"
+      maxlength="9"
+      required
+      #taskname="ngModel"
+      [(ngModel)]="taskName"
+    />
+    <br />
+    <div *ngIf="!taskname.valid">
+      A name kötelező mező, hossza legyen nagyobb, mint 3 és kisebb, mint 10!
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="state">Státusz</label>
+    <input id="state" class="form-control" name="state" [(ngModel)]=taskState/>
+  </div>
+  <div class="form-group">
+    <label for="description">Leírás</label>
+    <textarea id="description" class="form-control" name="description" [(ngModel)]=taskDescription>
+    </textarea>
+  </div>
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="!urlap.valid"
+  >
+    Submit
+  </button>
+
+  <button (click)="onClick()">Vissza</button>
+</form>

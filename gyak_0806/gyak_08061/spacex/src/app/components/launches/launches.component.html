@@ -1,0 +1,8 @@
+<div *ngIf="spaceXLaunches">
+    <p appTurnBgBlue appTurnRed [index]=i *ngFor="let launch of spaceXLaunches; let i=index">
+        Flight number: {{launch.flight_number}} <br>
+        Mission name: {{launch.mission_name}} <br>
+        Launch year: {{launch.launch_year}} <br>
+        Upcoming: {{launch.upcoming ? "Upcoming": "Launched"}} <br>
+    </p>
+</div>

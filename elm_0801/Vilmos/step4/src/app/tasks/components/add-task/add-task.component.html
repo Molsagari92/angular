@@ -1,0 +1,7 @@
+<p>Name</p>
+<input type="text" [(ngModel)]="taskName">
+
+<p>Owner</p>
+<input  type="text" [(ngModel)]="taskOwner">
+
+<button (click)="onAdd()" [disabled]="!this.taskOwner && !this.taskName">Add</button>
